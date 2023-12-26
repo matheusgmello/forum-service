@@ -18,6 +18,8 @@ import { DeleteQuestionController } from './controllers/delete-question.controll
 import { DeleteQuestionUseCase } from '@/domain/forum/application/use-cases/delete-question'
 import { AnswerQuestionController } from './controllers/answer-question.controller'
 import { AnswerQuestionUseCase } from '@/domain/forum/application/use-cases/answer-question'
+import { EditAnswerController } from './controllers/edit-answer.controller'
+import { EditAnswerUseCase } from '@/domain/forum/application/use-cases/edit-answer'
 import { DeleteAnswerController } from './controllers/delete-answer.controller'
 import { DeleteAnswerUseCase } from '@/domain/forum/application/use-cases/delete-answer'
 
@@ -32,7 +34,7 @@ import { DeleteAnswerUseCase } from '@/domain/forum/application/use-cases/delete
     EditQuestionController,
     DeleteQuestionController,
     AnswerQuestionController,
-    EditQuestionController,
+    EditAnswerController,
     DeleteAnswerController,
   ],
   providers: [
@@ -44,7 +46,7 @@ import { DeleteAnswerUseCase } from '@/domain/forum/application/use-cases/delete
     EditQuestionUseCase,
     DeleteQuestionUseCase,
     AnswerQuestionUseCase,
-    EditQuestionUseCase,
+    EditAnswerUseCase,
     DeleteAnswerUseCase,
   ],
 })
