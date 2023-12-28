@@ -1,7 +1,7 @@
 import {
   UploadParams,
   Uploader,
-} from '@/domain/forum/application/use-cases/storage/uploader'
+} from '@/domain/forum/application/storage/uploader'
 import { randomUUID } from 'crypto'
 
 interface Upload {
