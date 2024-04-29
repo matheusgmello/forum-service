@@ -1,32 +1,58 @@
-# Nest Fórum 
+# Example of a forum with DDD architecture and SSE
 
-Fórum desenvolvido com o intuito de permitir que os usuários realizem registros para esclarecerem suas dúvidas referentes às suas perguntas de estudo. Tanto professores quanto alunos têm a possibilidade de responder às dúvidas.
+Forum developed to study Domain-Driven Design (DDD) architecture and communication technology like Server-Sent Events (SSE), where students and teachers can ask questions and answer doubts.
 
-# Configurações 
+# Configs 
 
-### Requisitos
+### Requirements
 
 - [Node](https://nodejs.org/en/docs)
 - [Docker](https://www.docker.com/)
 - [CloudFlareR2](https://developers.cloudflare.com/r2/)
 
-**Clone o projeto e acesse a pasta**
+**Clone the project and access the folder**
 
 ``` bash
-git clone git@github.com:matheusgmello/nest-forum-clean.git && cd nest-forum-clean
+git clone git@github.com:matheusgmello/forum-ddd-sse.git && cd forum-ddd-sse
 ```
-- Instale as dependências(`pnpm run dev`)
-- Configure o Docker(`docker compose up -d`)
-- Configure as Variáveis de ambiente no (`.env`)
-- Configure o banco de dados(`prisma migrate dev`)
-- Rode e teste a aplicação(`pnpm run start:dev`)
+- Install dependencies(`pnpm run dev`)
+- Configure Docker (`docker compose up -d`)
+- Configure environment variables in (`.env`)
+- Configure the database(`prisma migrate dev`)
+- Run and test the application(`pnpm run start:dev`)
 
 ## Testes E2E
-- `Deve armazenar em cache os detalhes da pergunta.`
-- `Deve retornar os detalhes da pergunta em cache em chamadas subsequentes.`
-- `Deve redefinir o cache dos detalhes da pergunta ao salvar a pergunta.`
-- `Deve enviar uma notificação quando a melhor resposta da pergunta for escolhida.`
-- `Deve enviar uma notificação quando uma resposta for criada.`
+
+- `Should cache question details`
+- `Should return cached question details in subsequent calls`.
+- `Should reset the question details cache upon saving the question`.
+- `Should send a notification when the best answer for the question is chosen`.
+- `Should send a notification when an answer is created`.
+
+## Fórum (DDD)
+
+- Forum Experts
+  - Conversations
+
+- Ubiquitous Language
+
+- User
+  - Member
+  - Moderator
+  - Administrator
+  - Visitor
+
+- Topics
+
+- Posts
+
+- Forum Events
+
+- Subforums (Bounded Contexts)
+
+- Sticky Topics
+
+- Features
 
 ## Tecnologias
 
